@@ -37,7 +37,7 @@ echo json_encode($arr);
 
 
 echo '<br>';
-echo 'time elapsed for checking TOR : '. ($time_elapsed_secs*1000) . 'ms';
+echo 'time elapsed for checking TOR : '. ($time_elapsed_secs) . 'microseconds';
 
 
 
