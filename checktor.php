@@ -20,6 +20,8 @@ $start = microtime(true);
 //echo "Tor Check Service :: " ;
 $var = IsTorExitPoint();
 
+$time_elapsed_secs = microtime(true) - $start;
+
 $arr = array('using_tor : ' => $var , 'ip-addr' => $_SERVER['REMOTE_ADDR']);
 
 
@@ -33,9 +35,9 @@ $arr = array('using_tor : ' => $var , 'ip-addr' => $_SERVER['REMOTE_ADDR']);
 
 echo json_encode($arr);
 
-$time_elapsed_secs = microtime(true) - $start;
+
 echo '<br>';
-echo 'time elapsed : '. ($time_elapsed_secs*1000) . 'ms';
+echo 'time elapsed for checking TOR : '. ($time_elapsed_secs*1000) . 'ms';
 
 
 
